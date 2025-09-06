@@ -1,0 +1,121 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">DietPlanner</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#planner">Planner</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+   <section id="home" class="hero">
+  <h1>Eat Right, Stay Fit, Live Better.</h1>
+  <p>
+    Welcome to your personal diet planner! Here you can create a customized meal plan 
+    based on your age, weight, activity level, and health goals. Whether you want to lose weight, 
+    gain muscle, or maintain a healthy lifestyle, we’ll guide you with balanced nutrition 
+    that suits your body and your routine.
+  </p>
+  <button onclick="scrollToPlanner()">Get Started</button>
+</section>
+
+
+  <!-- Planner Section -->
+  <section id="planner" class="planner">
+    <h2>Login & Diet Planner</h2>
+
+    <div class="form-container">
+      <!-- Login -->
+      <div id="login-section">
+        <h3>Login</h3>
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+      </div>
+
+      <!-- Planner Form -->
+      <div id="planner-section" style="display:none;">
+        <h3>Enter Your Details</h3>
+        <form id="dietForm">
+          <label>Age:</label>
+          <input type="number" id="age" required>
+
+          <label>Weight (kg):</label>
+          <input type="number" id="weight" required>
+
+          <label>Height (cm):</label>
+          <input type="number" id="height" required>
+
+          <label>Gender:</label>
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+          <label>Activity Level:</label>
+          <select id="activity">
+            <option value="sedentary">Sedentary</option>
+            <option value="light">Lightly Active</option>
+            <option value="moderate">Moderately Active</option>
+            <option value="active">Very Active</option>
+          </select>
+
+          <label>Goal:</label>
+          <select id="goal">
+            <option value="loss">Weight Loss</option>
+            <option value="maintain">Maintain</option>
+            <option value="gain">Weight Gain</option>
+          </select>
+
+          <label>Diet Type:</label>
+          <select id="dietType">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="eggitarian">Eggitarian</option>
+            <option value="nonveg">Non-Vegetarian</option>
+          </select>
+
+          <label>Body Type:</label>
+          <select id="bodyType">
+            <option value="ectomorph">Ectomorph</option>
+            <option value="mesomorph">Mesomorph</option>
+            <option value="endomorph">Endomorph</option>
+          </select>
+
+          <button type="submit">Generate Plan</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="result" class="result"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      DietPlanner is your personal guide to healthy living.  
+      Enter your details, and we’ll suggest a balanced diet plan 
+      tailored to your body type and goals.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DietPlanner. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
